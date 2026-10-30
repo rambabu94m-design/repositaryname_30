@@ -109,7 +109,14 @@
 				"outputs": [
 					{
 						"referenceName": "DS_ADLS_30",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"container": "storagecontainer-30",
+							"folder": {
+								"value": "@concat(\n    activity('Lookup').output.firstRow.source_system,\n    '/',\n    activity('Lookup').output.firstRow.source_table_name,\n    '/',\n    variables('currenttimestampname_30')\n)",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
@@ -118,12 +125,6 @@
 			"table_id": {
 				"type": "string",
 				"defaultValue": "1"
-			},
-			"container": {
-				"type": "string"
-			},
-			"folder": {
-				"type": "string"
 			}
 		},
 		"variables": {

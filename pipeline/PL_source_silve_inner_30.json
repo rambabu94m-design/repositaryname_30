@@ -111,7 +111,7 @@
 						"referenceName": "DS_ADLS_30",
 						"type": "DatasetReference",
 						"parameters": {
-							"container": "storagecontainer-30",
+							"container": "landing",
 							"folder": {
 								"value": "@concat(\n    activity('Lookup').output.firstRow.source_system,\n    '/',\n    activity('Lookup').output.firstRow.source_table_name,\n    '/',\n    variables('currenttimestampname_30')\n)",
 								"type": "Expression"

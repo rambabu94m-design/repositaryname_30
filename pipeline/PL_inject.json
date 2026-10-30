@@ -51,11 +51,7 @@
 				"outputs": [
 					{
 						"referenceName": "DS_ADLS_30",
-						"type": "DatasetReference",
-						"parameters": {
-							"container": "storagecontainer-30",
-							"folder": "test"
-						}
+						"type": "DatasetReference"
 					}
 				]
 			}
